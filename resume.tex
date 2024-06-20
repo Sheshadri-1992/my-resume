@@ -1,0 +1,385 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+	\uline{\phantom{#1}}%
+	\llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+	\bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		{#1 \vspace{-1pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+		\textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+	\end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		#1 & {\color{dark-grey}} \\
+	\end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tikz}
+\newcommand{\StartMenu}{\includegraphics[scale=0.08]{./figures/iisc_logo.png}}%
+
+\begin{document}
+	
+	%----------HEADING----------
+	\begin{center}
+		\textbf{\Huge Sheshadri K R} \\ \vspace{5pt}
+		\small \faPhone* \texttt{9845213149} \hspace{1pt} $|$
+		\hspace{1pt} \faEnvelope \hspace{2pt} \texttt{sheshadri.madhu@gmail.com} \hspace{1pt} $|$ 
+		\hspace{1pt} \faEnvelope \hspace{2pt} \texttt{sheshadrik@iisc.ac.in} \hspace{1pt} $|$ 
+		\hspace{1pt} \faGithub \hspace{2pt} \texttt{github.com/Sheshadri-1992} \hspace{1pt} $|$
+		\hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Bangalore, India}
+		\\ \vspace{-3pt}
+	\end{center}
+
+
+	%-----------EDUCATION-----------
+	\section {EDUCATION}
+	\resumeSubHeadingListStart
+	\resumeSubheading {IISc, Bangalore} {Aug. 2018 -- Present}
+	{Ph.D, Serverless computing, Function as a Service (FaaS), IoT}
+	{Bangalore, India}
+	{\textit{Advised by : Dr. J. Lakshmi, CSL, SERC}}
+
+	
+	\resumeSubheading
+	{IIIT Hyderabad}{Aug. 2015 -- Jun. 2017}
+	{M.Tech CSIS}{Hyderabad, India}
+	
+	\resumeSubheading
+	{Bangalore Institute of Technology}{Aug. 2009 -- Jun. 2013}
+	{B.E. Computer Science and Engineering}{Bangalore, India}	
+	
+	\resumeSubHeadingListEnd
+	
+	%-----------PUBLICATIONS-----------
+	\section {PUBLICATIONS}
+	\resumeSubHeadingListStart
+		
+	\resumeSubheading
+	{\href{https://ieeexplore.ieee.org/abstract/document/10254966}{Hybrid Serverless Platform for Service Function Chains}}{Jul 2023}
+	{\textbf{S. K. R} and J. Lakshmi, 16th  IEEE CLOUD 2023}
+	
+	\resumeSubheading
+	{\href{https://ieeexplore.ieee.org/abstract/document/9860835/}{QoS aware FaaS for Heterogeneous Edge-Cloud continuum}}{Jun 2022}
+	{\textbf{S. K. R} and J. Lakshmi, 15th IEEE CLOUD 2022}
+	
+	\resumeSubheading
+	{\href{https://ieeexplore.ieee.org/document/9499608}{QoS aware FaaS platform}}{Jun 2021}
+	{\textbf{S. K. R} and J. Lakshmi, (STEERS Workshop) IEEE/ACM 21st International  CCGrid, 2021}	
+	
+	\resumeSubheading
+	{\href{https://ieeexplore.ieee.org/abstract/document/8818408}{Elfstore : A Resilient Data Storage Service for Federated Edge and Fog Resources}}{Aug. 2019}
+	{S. K. Monga, \textbf{S. K. Ramachandra} and Y. Simmhan, ICWS, 2019}
+	
+	\resumeSubheading
+	{\href{https://ieeexplore.ieee.org/abstract/document/8752708}{Dynamic Scaling of Video Analytics for Wide-area Tracking in Urban Spaces}}{Jul. 2019}
+	{Aakash Khochare, \textbf{KR Sheshadri}, R Shriram, Yogesh Simmhan, 2019 19th IEEE/ACM CCGrid, 2019}
+	
+	\resumeSubHeadingListEnd
+	
+	
+	%-----------EXPERIENCE-----------
+	\section{EXPERIENCE}
+	\resumeSubHeadingListStart
+	
+	\resumeSubheading
+	{Ericsson India Global Services Pvt. Limited}{Jun 2023 - Sep 2023}
+	{Research Intern}{Bangalore, India}
+	\resumeItemListStart
+	\resumeItem{Proposed and implemented architectures for storage services near 5G Telco Edges}
+%	\resumeItem{Handling script automation and code-base maintenance for our team.}
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Samsung R and D}{Jun 2017 - Aug 2018}
+	{Senior Software Engineer}{Bangalore, India}
+	\resumeItemListStart
+	\resumeItem{Designing, development of api along with test cases for Smartthings Android Application.}
+	\resumeItem{Handling script automation and code-base maintenance for our team.}
+	\resumeItemListEnd
+	
+	
+%	\resumeItem{\textbf{Highlights}:
+%		\href{https://www.youtube.com/watch?v=HhWUjp5pD0g}{\myuline {The Problem with Productivity Apps}}, \href{https://www.youtube.com/watch?v=ms4cWMsOITs}{\myuline {Obsidian App Review}},
+%		\href{https://www.youtube.com/watch?v=PkDbkyIR44w}{\myuline {Not-So-Minimal Desk Setup}}}
+%	\resumeItemListEnd
+	
+	\resumeSubheading
+	{IIIT Hyderabad}{Aug. 2016 -- Nov. 2016}
+	{Teaching Assistant - Scripting and computing environments}{Hyderabad, India}
+	\resumeItemListStart
+	\resumeItem{TA for the course  taught by Dr Suryakanth V Gangashetty.}
+	\resumeItem{Designed assignments around developing HTML pages, Python scripting, shell scripting(bash), grep, sed etc.}
+	
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Robert Bosch Engineering and Business Solutions}{Sep. 2013 -- Sep. 2014}
+	{Associate Software Engineer }{Bangalore, India}
+	\resumeItemListStart
+	\resumeItem{Developed an iPhone application called DeltaApp using Objective C, for issuing timely reminders to water plants.}
+	\resumeItem{Developed an Internet web browser using C++ in Qt framework for embedded systems.}
+	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd
+	
+	
+	%-----------PROJECTS-----------
+	
+	\section{SELECTED PROJECTS}
+	\resumeSubHeadingListStart
+	\resumeProjectHeading
+	{\textbf{Distributed key-value store -Evaluating erasure coding and replication}}	
+	
+	{\textit{Course Project: DS256 - IISc Taught by Prof. Yogesh Simmhan}}
+	\resumeItemListStart
+	\resumeItem{Designed and developed a data-store which supports both replication and Erasure Coding (EC).}
+	\resumeItem{Proposed a Partial Replication, Partial Erasure coding (PRPE) policy to store data for a given storage budget.}
+	\resumeItem{Evaluated the PRPE strategy for the metrics of storage efficiency and retrieval latency for different EC policies.}	
+	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd
+	
+	\resumeSubHeadingListStart
+	\resumeProjectHeading
+	{\textbf{Implementation of HBase with recovery}} {Sept. 2020 -- Nov. 2020}	
+	{\textit{Master's project - IIIT-H : Advised by Dr. Vivekanand Vellanki}}
+	\resumeItemListStart
+	\resumeItem{Designed and developed a HBase like system which runs on HDFS, supports the standard \textit{put()} and \textit{get()}.}
+	\resumeItem{Implemented two different variations of recovery through Write Ahead Logs (WALs).}
+	\resumeItem{Used Apache Zookeeper to perform leader election among region servers, it also monitors state of nodes.}
+	\resumeItemListEnd
+	
+	\resumeProjectHeading
+	{\textbf{HDFS and MapReduce}} {Sept. 2020 -- Nov. 2020}	
+	{\textit{Course Project: Distributed Systems - IIIT-H: Instructor Dr. Vivekanand Vellanki}}
+	\resumeItemListStart
+	\resumeItem{Designed and developed HDFS like file system as a part of course project}
+	\resumeItem{The data store supports the standard \textit{put()}, \textit{get()} and \textit{append()} operations.}
+	\resumeItem{Implemented the MapReduce programming paradigm which runs on the HDFS.}
+	\resumeItem{Used Java RMI for interaction between nodes and Google protobuf was used for serializing/deserializing data.}
+	\resumeItemListEnd
+	
+%	\resumeProjectHeading
+%	{\textbf{Predict House Prices: Regression Techniques}}{Sept. 2019 -- May 2020}
+%	\resumeItemListStart
+%	\resumeItem{Designed House price prediction techniques on a housing dataset for a course project.}
+%	\resumeItem{Experimented with lasso and ridge regression techniques to predict the sales price of a house}
+%	\resumeItemListEnd
+	
+%	\resumeProjectHeading
+%	{\textbf{Mini SqlEngine}}{Sept. 2019 -- May 2020}
+%	\resumeItemListStart
+%	\resumeItem{Implemented the DML  (Select, Insert, Update and Delete) and DDL commands (Create, Drop and Truncate).}
+%	\resumeItem{Supported operations such as sorting of data, union and join of tables.}
+%	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd	
+	
+
+	%-----------EXPERIENCE-----------
+	\section{AWARDS}
+	\resumeSubHeadingListStart
+	
+	\resumeSubheading{IEEE TCSC SCALE Challenge}{May 2019}{Issuer : CCGrid}{CCGrid, 2019}
+	\resumeItemListStart
+	\resumeItem{ Was a part of the team which won SCALE challege at CCGrid 2019 for the work ``Dynamic Scaling of Video Analytics for Wide-area Tracking in Urban Spaces''.}
+	\resumeItem{I handled the vehicular simulation using SUMO, where the traffic was overlayed on the IISc Campus.}
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Best Paper Award}{May 2021}
+	{Issuer :  Serverless To sErvE moRe at Scale STEERS 2021, with CCGrid}{CCGrid, 2021}
+	\resumeItemListStart
+	\resumeItem{ Awarded best paper for our work "QoS aware FaaS platform" at the STEERS workshop held in conjunction with CCGrid 2021.}	
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Dean's Award for Academic Excellence}{Nov. 2017}
+	{Issuer: IIIT Hyderabad}{Hyderabad, India}
+	\resumeItemListStart
+	\resumeItem{Received Dean's List Award for academic excellence in the academic year 2016-2017.}	
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Merit prize for featuring in top-10 in the CSE Dept, BIT}{Sep. 2011 -- Jan. 2012}
+	{Issuer : CSE Dept, BIT Bangalore}{Bangalore, India}
+	\resumeItemListStart
+	\resumeItem{Received a merit prize for featuring in top-10 of the CSE Dept. in 5th and 6th semester during B.E.}	
+	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd
+	
+	%-----------EXPERIENCE-----------
+	\section{COMMUNITY SERVICE}
+	\resumeSubHeadingListStart
+	
+	\resumeSubheading
+	{Chair, Vice-Chair, Event Coordinator}{Jul 2019 - present}
+	{IISc ACM student chapter}{IISc, Bangalore}
+	\resumeItemListStart
+	\resumeItem{ Organized technical/research talks, student interaction sessions, coding bootcamp events for the computing community at IISc.}	
+	\resumeItemListEnd
+	
+%	\resumeSubheading
+%	{Event Coordinator}{May 2019 - Feb 2020}
+%	{IISc ACM student chapter}{IISc, Bangalore}
+%	\resumeItemListStart
+%	\resumeItem{ I undertook responsibilities to host the distinguished talks smoothly by overseeing all the event logistics.}	
+%	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Event Coordinator}{Feb. 2019}
+	{IISc Open Day}{IISc, Bangalore}
+	\resumeItemListStart
+	\resumeItem{Undertook responsibilities to host students of different schools to view the science exhibition and experiments for IISc Open Day 2019.}	
+	\resumeItemListEnd	
+		
+	\resumeSubHeadingListEnd
+	
+
+	
+	
+	%
+%	%-----------PROGRAMMING SKILLS-----------
+%	\section{SKILLS}
+%	\begin{itemize}[leftmargin=0in, label={}]
+%		\small{\item{
+%				\textbf{Development Languages} {: Java, C, C++, Python, Shell (bash) Scripting}\vspace{2pt} \\
+%				\textbf{UI Skills}     {: HTML, JavaScript and CSS }
+%		}}
+%	\end{itemize}
+	
+	
+	%-------------------------------------------
+	
+		%
+	%-----------PROGRAMMING SKILLS-----------
+%	\section{INTEREST AND HOBBIES}
+%	\begin{itemize}[leftmargin=0in, label={}]
+%		\small{\item{Participating in debates, topics of interest are politics and national security. Playing badminton and violin.		
+%		}}
+%	\end{itemize}
+%	
+	
+	%-------------------------------------------
+	
+	
+\end{document}
