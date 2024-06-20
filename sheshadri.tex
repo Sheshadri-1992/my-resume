@@ -81,7 +81,7 @@
 % sans serif sections
 \titleformat {\section}{
 	\bfseries \vspace{2pt} \raggedright \large % header section
-}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-9pt}]
 
 % only for pdflatex
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -98,9 +98,9 @@
 \newcommand{\resumeSubheading}[4]{
 	\vspace{-1pt}\item
 	\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+		\textbf{#1} & {\color{dark-grey}\small #2}\vspace{2pt}\\ % top row of resume entry
 		\textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
-	\end{tabular*}\vspace{-4pt}
+	\end{tabular*}\vspace{-3pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -114,10 +114,10 @@
 	\item
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 		#1 & {\color{dark-grey}} \\
-	\end{tabular*}\vspace{-4pt}
+	\end{tabular*}\vspace{-2pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-5pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -125,7 +125,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
 	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
 \color{text-grey}
 
@@ -141,7 +141,7 @@
 	\begin{center}
 		\textbf{\Huge Sheshadri K R} \\ \vspace{5pt}
 		\small \faPhone* \texttt{9845213149} \hspace{1pt} $|$
-%		\hspace{1pt} \faEnvelope \hspace{2pt} \texttt{sheshadri.madhu@gmail.com} \hspace{1pt} $|$ 
+		\hspace{1pt} \faEnvelope \hspace{2pt} \texttt{sheshadri.madhu@gmail.com} \hspace{1pt} $|$ 
 %		\hspace{1pt} \faEnvelope \hspace{2pt} \texttt{sheshadrik@iisc.ac.in} \hspace{1pt} $|$ 
 		\hspace{1pt} \faGithub \hspace{2pt} \texttt{github.com/Sheshadri-1992} \hspace{1pt} $|$
 		\hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Bangalore, India}
@@ -154,12 +154,29 @@
 	\resumeSubHeadingListStart
 	
 	\resumeSubheading
-	{IISc Bangalore}{Aug. 2018 -- Present}
-	{Ph.D Scholar}{Bangalore, India}
+	{IISc Bangalore, Ph.D Scholar}{Aug. 2018 -- Present}
+%	{Ph.D Scholar}{Bangalore, India}
+	{Serverless Platforms}{}
 	\resumeItemListStart
 	%	\resumeItem{TA for the course  taught by Dr Suryakanth V Gangashetty.}
-	\resumeItem{Proposed and implemented Quality of Service aware Serverless platforms}
-	\resumeItem{Proposed and developed reliable distributed data stores for Fog-Edge layer}
+	\resumeItem{Proposed and implemented a \textbf{Quality of Service (QoS) aware serverless platform} that performs resource efficient function deployments across Edge and Cloud resource layers.}
+	
+	\resumeItem{Designed a \textbf{Hybrid Serverless Platform} that deploys network functions across IaaS and FaaS services. 
+		
+		Proposed a low-overhead serverless solution to process network workloads and a reactive scaling strategy that right-sizes IaaS/FaaS instances based on incoming workload.}
+	
+	\resumeItem{Proposed a novel fusion criteria RightFusion that performs \textbf{QoS aware function fusion} across Edge and Cloud resource layers.
+		The fusion criterion is sensitive to resource heterogeneity and considers application characteristics and QoS requirements in its placement decisions.}
+	
+	\resumeItemListEnd
+	
+	
+	
+	{\textit{Distributed Data Stores}}{}
+	\resumeItemListStart
+	%	\resumeItem{TA for the course  taught by Dr Suryakanth V Gangashetty.}
+	\resumeItem{Designed and developed a reliable distributed data store called \textbf{ElfStore} for data management at the Edge-Fog layer}
+	\resumeItem{Designed and developed a data store that performs replication and erasure coding based on a storage budget.}
 	
 	\resumeItemListEnd
 	
@@ -167,15 +184,16 @@
 	{Ericsson India Global Services Pvt. Limited}{Jun 2023 - Sep 2023}
 	{Research Intern}{Bangalore, India}
 	\resumeItemListStart
-	\resumeItem{Proposed and implemented proof-of-concept data-store near 5G Telco Edges}
+	\resumeItem{Proposed and implemented a proof-of-concept data store for 5G Telco Edges.}
 %	\resumeItem{Handling script automation and code-base maintenance for our team.}
 	\resumeItemListEnd
 	
 	\resumeSubheading
-	{Samsung R and D}{Jun 2017 - Aug 2018}
+	{Samsung R and D Institute - Bangalore (SRI-B)}{Jun 2017 - Aug 2018}
 	{Senior Software Engineer}{Bangalore, India}
 	\resumeItemListStart
-	\resumeItem{Designed device plugin APIs and test cases for SmartThings Android application.}
+	\resumeItem{Developed device plugin APIs and test cases for the SmartThings Android application.}
+	\resumeItem{Generated datasets for different Samsung appliances using JSGF to train Samsung Bixby.}
 %	\resumeItem{Handling script automation and code-base maintenance for our team.}
 	\resumeItemListEnd
 	
@@ -186,11 +204,13 @@
 %	\resumeItemListEnd	
 	
 	\resumeSubheading
-	{IIIT Hyderabad}{Aug. 2016 -- Nov. 2016}
-	{Teaching Assistant - Scripting and computing environments}{Hyderabad, India}
+	{IIIT Hyderabad, Graduate Student}{Aug. 2016 -- Nov. 2016}
+	{Implementation of HBase with recovery (Advised by Dr. Vivekanand Vellanki)}{Hyderabad, India}
 	\resumeItemListStart
 %	\resumeItem{TA for the course  taught by Dr Suryakanth V Gangashetty.}
-	\resumeItem{Designed assignments for Python scripting, shell scripting(bash), grep, sed etc.}
+	\resumeItem{Designed and developed an HBase-like system that runs on HDFS and supports the standard \textit{put()} and \textit{get()}.}
+	
+	\resumeItem{Implemented two different variations of recovery through Write Ahead Logs (WALs), used Apache Zookeeper to perform leader election among region servers.}
 	
 	\resumeItemListEnd
 	
@@ -203,6 +223,57 @@
 	\resumeItemListEnd
 	
 	\resumeSubHeadingListEnd
+	
+		%-----------PROJECTS-----------
+	
+%	\section{PROJECTS}
+%	\resumeSubHeadingListStart
+%	\resumeProjectHeading
+%	{\textbf{Hybrid distributed data store - Erasure coding and Replication}}	
+%	
+%	{\textit{Course Project: DS256 - IISc Taught by Prof. Yogesh Simmhan}}
+%	\resumeItemListStart
+%	\resumeItem{Designed and developed a data-store that performs replication and Erasure Coding based on a storage budget.}
+%	%	\resumeItem{Proposed a Partial Replication, Partial Erasure coding (PRPE) policy to store data for a given storage budget.}
+%	%	\resumeItem{Evaluated the PRPE strategy for the metrics of storage efficiency and retrieval latency for different EC policies.}	
+%	\resumeItemListEnd
+%	
+%	\resumeSubHeadingListEnd
+%	
+%	\resumeSubHeadingListStart
+%	\resumeProjectHeading
+%	{\textbf{Implementation of HBase with recovery}} {Sept. 2020 -- Nov. 2020}	
+%	{\textit{Master's project - IIIT-H : Advised by Dr. Vivekanand Vellanki}}
+%	\resumeItemListStart
+%	\resumeItem{Designed and developed a HBase like system which runs on HDFS, supports the standard \textit{put()} and \textit{get()}.}
+%	\resumeItem{Implemented two different variations of recovery through Write Ahead Logs (WALs). Used Apache Zookeeper to perform leader election among region servers.}
+%	\resumeItemListEnd
+	
+	%	\resumeProjectHeading
+	%	{\textbf{HDFS and MapReduce}} {Sept. 2020 -- Nov. 2020}	
+	%	{\textit{Course Project: Distributed Systems - IIIT-H: Instructor Dr. Vivekanand Vellanki}}
+	%	\resumeItemListStart
+	%	\resumeItem{Designed and developed HDFS like file system as a part of course project, that suppro}
+	%	\resumeItem{The data store supports the standard \textit{put()}, \textit{get()} and \textit{append()} operations.}
+	%	\resumeItem{Implemented the MapReduce programming paradigm which runs on the HDFS.}
+	%	\resumeItem{Used Java RMI for interaction between nodes and Google protobuf was used for serializing/deserializing data.}
+	%	\resumeItemListEnd
+	
+	%	\resumeProjectHeading
+	%	{\textbf{Predict House Prices: Regression Techniques}}{Sept. 2019 -- May 2020}
+	%	\resumeItemListStart
+	%	\resumeItem{Designed House price prediction techniques on a housing dataset for a course project.}
+	%	\resumeItem{Experimented with lasso and ridge regression techniques to predict the sales price of a house}
+	%	\resumeItemListEnd
+	
+	%	\resumeProjectHeading
+	%	{\textbf{Mini SqlEngine}}{Sept. 2019 -- May 2020}
+	%	\resumeItemListStart
+	%	\resumeItem{Implemented the DML  (Select, Insert, Update and Delete) and DDL commands (Create, Drop and Truncate).}
+	%	\resumeItem{Supported operations such as sorting of data, union and join of tables.}
+	%	\resumeItemListEnd
+	
+%	\resumeSubHeadingListEnd	
 	
 		%-----------PUBLICATIONS-----------
 	\section {PUBLICATIONS}
@@ -221,66 +292,16 @@
 	{\textbf{S. K. R} and J. Lakshmi, (STEERS Workshop) IEEE/ACM 21st International  CCGrid, 2021}	
 	
 	\resumeSubheading
-	{\href{https://ieeexplore.ieee.org/abstract/document/8818408}{Elfstore : A Resilient Data Storage Service for Federated Edge and Fog Resources}}{Aug. 2019}
+	{\href{https://ieeexplore.ieee.org/abstract/document/8818408}{Elfstore : A Resilient Data Storage Service for Federated Edge and Fog Resources}}{Aug 2019}
 	{S. K. Monga, \textbf{S. K. Ramachandra} and Y. Simmhan, ICWS, 2019}
 	
 	\resumeSubheading
-	{\href{https://ieeexplore.ieee.org/abstract/document/8752708}{Dynamic Scaling of Video Analytics for Wide-area Tracking in Urban Spaces}}{Jul. 2019}
+	{\href{https://ieeexplore.ieee.org/abstract/document/8752708}{Dynamic Scaling of Video Analytics for Wide-area Tracking in Urban Spaces}}{Jul 2019}
 	{Aakash Khochare, \textbf{KR Sheshadri}, R Shriram, Yogesh Simmhan, 2019 19th IEEE/ACM CCGrid, 2019}
 	
 	\resumeSubHeadingListEnd
 	
-	
-	%-----------PROJECTS-----------
-	
-	\section{SELECTED PROJECTS}
-	\resumeSubHeadingListStart
-	\resumeProjectHeading
-	{\textbf{Hybrid distributed data store - Erasure coding and Replication}}	
-	
-	{\textit{Course Project: DS256 - IISc Taught by Prof. Yogesh Simmhan}}
-	\resumeItemListStart
-	\resumeItem{Designed and developed a data-store which supports replication and Erasure Coding based on a storage budget.}
-%	\resumeItem{Proposed a Partial Replication, Partial Erasure coding (PRPE) policy to store data for a given storage budget.}
-%	\resumeItem{Evaluated the PRPE strategy for the metrics of storage efficiency and retrieval latency for different EC policies.}	
-	\resumeItemListEnd
-	
-	\resumeSubHeadingListEnd
-	
-	\resumeSubHeadingListStart
-	\resumeProjectHeading
-	{\textbf{Implementation of HBase with recovery}} {Sept. 2020 -- Nov. 2020}	
-	{\textit{Master's project - IIIT-H : Advised by Dr. Vivekanand Vellanki}}
-	\resumeItemListStart
-	\resumeItem{Designed and developed a HBase like system which runs on HDFS, supports the standard \textit{put()} and \textit{get()}.}
-	\resumeItem{Implemented two different variations of recovery through Write Ahead Logs (WALs). Used Apache Zookeeper to perform leader election among region servers.}
-	\resumeItemListEnd
-	
-%	\resumeProjectHeading
-%	{\textbf{HDFS and MapReduce}} {Sept. 2020 -- Nov. 2020}	
-%	{\textit{Course Project: Distributed Systems - IIIT-H: Instructor Dr. Vivekanand Vellanki}}
-%	\resumeItemListStart
-%	\resumeItem{Designed and developed HDFS like file system as a part of course project, that suppro}
-%	\resumeItem{The data store supports the standard \textit{put()}, \textit{get()} and \textit{append()} operations.}
-%	\resumeItem{Implemented the MapReduce programming paradigm which runs on the HDFS.}
-%	\resumeItem{Used Java RMI for interaction between nodes and Google protobuf was used for serializing/deserializing data.}
-%	\resumeItemListEnd
-	
-%	\resumeProjectHeading
-%	{\textbf{Predict House Prices: Regression Techniques}}{Sept. 2019 -- May 2020}
-%	\resumeItemListStart
-%	\resumeItem{Designed House price prediction techniques on a housing dataset for a course project.}
-%	\resumeItem{Experimented with lasso and ridge regression techniques to predict the sales price of a house}
-%	\resumeItemListEnd
-	
-%	\resumeProjectHeading
-%	{\textbf{Mini SqlEngine}}{Sept. 2019 -- May 2020}
-%	\resumeItemListStart
-%	\resumeItem{Implemented the DML  (Select, Insert, Update and Delete) and DDL commands (Create, Drop and Truncate).}
-%	\resumeItem{Supported operations such as sorting of data, union and join of tables.}
-%	\resumeItemListEnd
-	
-	\resumeSubHeadingListEnd	
+
 	
 
 	%-----------EXPERIENCE-----------
@@ -289,7 +310,7 @@
 	
 	\resumeSubheading{IEEE TCSC SCALE Challenge}{May 2019}{Issuer : CCGrid, for ``Dynamic Scaling of Video Analytics for Wide-area Tracking in Urban Spaces''}{CCGrid, 2019}
 	\resumeItemListStart	
-	\resumeItem{Handled the vehicular simulation using SUMO, where the traffic was overlayed on the IISc Campus.}
+	\resumeItem{Handled the vehicular simulation using SUMO, the vehicular traffic was overlayed on the IISc Campus.}
 	\resumeItemListEnd
 	
 	\resumeSubheading
